@@ -40,6 +40,6 @@ To provide search engine crawlers with a list of all important pages, including 
 
 #### **C. User Interface (Wireframes/Screenshots)**
 
-![Profile](docs/Student Dashboard - Profile.png)
-![Message](docs/Student Dashboard - Message.png)
+![Profile](docs/Profile.png)
+![Message](docs/Message.png)
 ![Bids](docs/Bids.png)
