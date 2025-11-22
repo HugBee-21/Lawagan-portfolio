@@ -1,10 +1,10 @@
 # System Analysis & Design Portfolio
-**[Your Name]** *Aspiring System Analyst & IT Student* [Email Address] | [Link to LinkedIn (Optional)]
+**Aldyn Zandrex Lawagan** *Aspiring System Analyst & CS Student* Aldyn Zandrex Lawagan | https://www.linkedin.com/in/aldyn-zandrex-lawagan-57ab18239/
 
 ---
 
 ## 📖 Professional Summary
-Detail-oriented IT student aspiring to specialize in **System Analysis and Design**. Proven ability to translate business requirements into technical specifications, demonstrated through the design of scalable applications using **MVC architecture**. Proficient in **Java** and **MySQL**, with a strong focus on database modeling and process mapping.
+Detail-oriented CS student aspiring to specialize in **System Analysis and Design**. Proven ability to translate business requirements into technical specifications, demonstrated through the design of scalable applications using **MVC architecture**. Proficient in **Java** ,**MySQL**, and **HTML/CSS** with a strong focus on database modeling and process mapping.
 
 ---
 
@@ -15,7 +15,7 @@ Detail-oriented IT student aspiring to specialize in **System Analysis and Desig
 ![Architecture](https://img.shields.io/badge/Architecture-MVC-green)
 
 ### 1. Project Overview
-**The Problem:** [Briefly describe the problem. Example: The school library was using a manual paper-based system, resulting in lost books and long queues during borrowing.]
+**:**
 
 **The Solution:** Designed and developed a centralized management system to automate borrowing, returning, and inventory tracking. The system reduces manual entry errors and provides real-time availability status.
 
