@@ -1,5 +1,5 @@
 # System Analysis & Design Portfolio
-**Aldyn Zandrex Lawagan** *Aspiring System Analyst & CS Student* Aldyn Zandrex Lawagan | https://www.linkedin.com/in/aldyn-zandrex-lawagan-57ab18239/
+**Aldyn Zandrex Lawagan** *Aspiring System Analyst & CS Student* Aldyn Zandrex Lawagan | www.linkedin.com/in/lawagan
 
 ---
 
