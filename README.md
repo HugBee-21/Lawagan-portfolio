@@ -15,12 +15,12 @@ Detail-oriented CS student aspiring to specialize in **System Analysis and Desig
 ![Architecture](https://img.shields.io/badge/Architecture-MVC-green)
 
 ### 1. Project Overview
-**:**
-
-**The Solution:** Designed and developed a centralized management system to automate borrowing, returning, and inventory tracking. The system reduces manual entry errors and provides real-time availability status.
+Create a website for students of SAMCIS where they can bid and swap there items. It provides a
+safe and organized space where students can trade, buy, bid on items they need such as books,
+uniforms, gadgets and school supplies
 
 ### 2. System Architecture (MVC)
-I utilized the **Model-View-Controller (MVC)** pattern to separate concerns and ensure the system is scalable.
+We utilized the **Model-View-Controller (MVC)** pattern to separate concerns and ensure the system is scalable.
 
 * **Model:** Handled data logic and database interactions using MySQL.
 * **View:** Designed the user interface using [e.g., Java Swing / HTML / JSP].
