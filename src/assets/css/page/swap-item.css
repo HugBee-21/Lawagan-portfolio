@@ -1,0 +1,241 @@
+@import url(../base.css);
+@import url(../navbar.css);
+@import url(../footer.css);
+
+* {
+  color: black;
+}
+
+@media screen and (min-width: 320px) {
+  .info-property {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .swap-details {
+    padding: var(--padding-height-320) var(--padding-width-320);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .swap__ref {
+    margin-bottom: 1rem;
+  }
+  .swap__ref span {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  .images__main-thumbnail {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+  }
+  .images__main-thumbnail img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .images__thumbnail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 75px));
+    justify-content: center;
+    gap: 1rem;
+  }
+  .images__thumbnail img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 4px;
+    transition: border 0.2s ease, transform 0.2s ease;
+  }
+  .images__thumbnail img.active {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.02);
+  }
+  .swap__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .swap__info .swap-info-property {
+    color: var(--dark-secondary);
+  }
+  .swap__info .swap-info-value {
+    font-weight: 500;
+  }
+  .swap__info .info__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .swap__info .info__heading .heading__condition {
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: var(--accent-color);
+  }
+  .swap__info .info__heading .heading__title {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    color: var(--primary-color);
+  }
+  .swap__info .info__heading .heading__seller-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .swap__info .info__heading .heading__seller-wrapper a {
+    color: var(--dark-primary);
+  }
+  .swap__info .info__properties {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .swap__info .properties__looking-for {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .swap__info .properties__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .swap__actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .swap__actions button {
+    padding: 1rem 0;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .swap__actions .action__make-a-proposal {
+    width: 100%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--primary-white);
+  }
+  .swap__actions .action__make-a-proposal:hover {
+    background-color: #0a4499; /* slightly brighter navy */
+    box-shadow: 0 4px 10px rgba(7, 48, 102, 0.25);
+    transform: translateY(-2px);
+  }
+  .swap__actions .action__make-a-proposal:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(7, 48, 102, 0.2);
+  }
+  .swap__actions .action__add-to-watchlist {
+    border: 1px solid var(--dark-primary);
+    background-color: transparent;
+    width: 100%;
+  }
+  .swap__actions .action__add-to-watchlist:hover {
+    background-color: #262626;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  .swap__actions .action__add-to-watchlist:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .properties__description {
+    position: relative;
+  }
+  .properties__description .description__text {
+    max-height: 175px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .properties__description .description__text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .properties__description .description__text.expanded::after {
+    opacity: 0;
+  }
+  .properties__description .toggle-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .properties__description .description__toggle {
+    margin-top: 0.5rem;
+    background: none;
+    border: none;
+    color: #073066;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+  .properties__description .description__toggle:hover {
+    color: #0a4499;
+  }
+}
+@media screen and (min-width: 768px) {
+  .swap-details {
+    padding: var(--padding-height-768) var(--padding-width-768);
+  }
+  .swap__actions button {
+    padding: 1rem 0;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .images__main-thumbnail {
+    aspect-ratio: 4/3;
+  }
+  .images__thumbnail {
+    grid-template-columns: repeat(auto-fit, minmax(75px, 75px));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .swap-details {
+    padding: var(--padding-height-1024) var(--padding-width-1024);
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .images__thumbnail {
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  }
+  .images__main-thumbnail {
+    aspect-ratio: 16/9;
+  }
+  .images__thumbnail {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 80px));
+  }
+}
+@media screen and (min-width: 1440px) {
+  .swap-details {
+    padding: var(--padding-height-1440) var(--padding-width-1440);
+  }
+  .images__main-thumbnail {
+    aspect-ratio: 1.5;
+  }
+}/*# sourceMappingURL=swap-item.css.map */

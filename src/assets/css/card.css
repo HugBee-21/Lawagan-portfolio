@@ -1,0 +1,156 @@
+.card-link {
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+.card.swap {
+    height: 400px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border: black solid 1px;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-fav {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.card-condition {
+    position: absolute;
+    top: 77%; 
+    left: 3%; 
+    background-color: #E3E3E3;
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: black;
+    font-size: 12px;
+}
+
+.card-fav:hover {
+    color: red;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-user-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-user-name {
+    font-size: 14px;
+    padding-left: 3px;
+    color: var(--dark-secondary);
+}
+
+.card-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.card-listed-on {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.card-listed-on p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-secondary);
+    margin: 0;
+}
+
+.card-listed-on-time {
+    padding-left: 5px;
+    font-size: 12px;
+    color: #e39400;
+    font-weight: 700;
+}
+
+.card-close-time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-close-time p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-secondary);
+    margin: 0;
+}
+
+.card-time {
+    font-size: 14px;
+    color: #e39400;
+    font-weight: 700;
+}
+
+@media (min-width: 1366px) {
+    .card {
+        height: 100%;
+        width: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card-condition {
+        top: 85%;
+    }
+
+    .card.swap {
+        min-height: 450px;
+    }
+}

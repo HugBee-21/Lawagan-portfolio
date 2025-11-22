@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: #073066;
+    --accent-color: #F6C500;
+    --dark-primary: #262626;
+    --dark-secondary: #626262;
+    --primary-white: #f2f2f2f2;
+    --ui-border: #8B8D94;
+
+    /* Padding */
+    --padding-width-320: 1.5rem;
+    --padding-height-320: 1.25rem;
+    --padding-width-768: 3rem;
+    --padding-height-768: 2.5rem;
+    --padding-width-1024: 4rem;
+    --padding-height-1024: 3.5rem;
+    --padding-width-1440: 5rem;
+    --padding-height-1440: 6rem;
+}
+
+
+/* Global Setups */
+* {
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+::placeholder {
+    color: var(--ui-border);
+}
+
+body {
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+
+/* Containers */
+.container {
+    padding: 50px 75px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 60px;
+}
+
+.grid-container.row1 {
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr;
+}
+
+.grid-item {
+    position: relative;
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column; 
+    /* background-color: var(--primary-color); */
+}
+
+@media (max-width: 1280px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Overlays */
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+.overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay img {
+    width: 180px;
+    max-width: 60%;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.overlay h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--dark-primary);
+}
+
+.overlay p {
+    color: var(--dark-secondary);
+    font-size: 14;
+    margin-top: 6px;
+}
+
+
+/* Spinners */
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Visibility */
+.remove {
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.invisible {
+    opacity: 0;
+}

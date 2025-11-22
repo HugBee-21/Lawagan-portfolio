@@ -1,0 +1,292 @@
+#create-listing {
+    background-color: rgba(104, 104, 104, 0.9);
+    color: black;
+    transition: all 0.3s ease;
+}
+
+#create-listing-form {
+    display: flex;
+    gap: 40px;
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 1100px;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed black;
+    border-radius: 5px;
+    min-height: 200px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.upload-btn {
+   background-color: transparent; 
+   padding: 8px;
+   width: 30%;
+   border-radius: 5px;
+   font-size: 12px;
+   border: 1px solid #B2B2B2;
+}
+
+.upload-header {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.upload-text {
+    font-size: 12px;
+    color: var(--ui-border);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    transition: min-height 0.4s ease, max-height 0.4s ease;
+
+    /* For Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+
+    overflow: overlay;
+    overflow-x: hidden;
+}
+
+#preview-container.expand {
+    margin-top: 20px;
+}
+
+/* For Chrome, Edge, Safari (WebKit) */
+#preview-container::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+    position: absolute;
+}
+
+.preview-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+.preview-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.preview-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.preview-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    opacity: 1;
+    margin: 0;
+}
+
+.preview-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #333;
+}
+
+.preview-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85%;
+}
+
+.preview-size {
+    font-size: 12px;
+    color: #888;
+    text-align: start;
+}
+
+.delete-btn {
+    color: #d9534f;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+    color: #b52b27;
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toggle {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #e0e0e0;
+    padding: 3px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider (the track) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: background-color 0.3s;
+}
+
+/* Circle (the thumb) */
+.slider::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Checked (ON) state */
+.switch input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(22px);
+}
+
+.cancel-btn, .submit-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 1px solid var(--dark-primary);
+    transition: all 0.25s ease;
+}
+
+.cancel-btn:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    background: var(--dark-primary);
+    color: white;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #0a4499;
+    box-shadow: 0 4px 10px rgba(7, 48, 102, 0.25);
+    transform: translateY(-2px);
+}
