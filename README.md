@@ -8,7 +8,7 @@ Detail-oriented CS student aspiring to specialize in **System Analysis and Desig
 
 ---
 
-## Featured Project: [Project Name, e.g., Library Management System]
+## Featured Project: SAMCIS BID AND SWAP SYSTEM
 
 ![Java](https://img.shields.io/badge/Language-Java-orange)
 ![HTML](https://img.shields.io/badge/Language-HTML-orange)
